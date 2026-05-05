@@ -1,4 +1,4 @@
-# Day 4 — BSON Types Cheatsheet
+# BSON Types Cheatsheet
 
 ## What is BSON?
 
