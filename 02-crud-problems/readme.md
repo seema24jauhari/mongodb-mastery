@@ -124,7 +124,7 @@ db.employees.find({
 
 📝 Explanation
 
--Query will return exact match. If your column have value that is "developer" instead of "Developer" then in that case no data will return. To fix that we need to add regex.
+- Query will return exact match. If your column have value that is "developer" instead of "Developer" then in that case no data will return. To fix that we need to add regex.
 
 
 ### 10. Sort employees by salary (descending)
