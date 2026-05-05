@@ -1,4 +1,47 @@
-# MongoDB – README
+# 📘 MongoDB Learning Repository
+
+A structured repository to demonstrate practical MongoDB skills — from basics to real-world problem solving.
+
+
+## 📂 Project Structure
+
+```
+mongo-learning/
+ ├── 01-basics/          # Core concepts, setup, and simple queries
+ ├── 02-crud-problems/   # Real-world CRUD problems with solutions
+ ├── 03-aggregation/     # Aggregation pipeline queries
+ ├── 04-indexing/        # Indexing and performance concepts
+ ├── 05-mini-project/    # Practical project using MongoDB
+ └── README.md
+```
+
+---
+
+## 🚀 What This Repo Covers
+
+* MongoDB fundamentals (documents, collections, BSON)
+* CRUD operations with real use cases
+* Aggregation pipelines for data analysis
+* Indexing for performance optimization
+* Mini project to demonstrate practical implementation
+
+---
+
+## 🎯 Approach
+
+This repository follows a **problem-solving approach** rather than just syntax:
+
+* Each topic includes **real scenarios**
+* Queries are written with **clear outputs**
+* Focus is on **practical usage**, not just theory
+
+---
+
+## 💡 Goal
+
+To showcase MongoDB knowledge in a way that reflects **real engineering skills**, not just learning notes.
+
+---
 
 ## What is MongoDB?
 
@@ -79,3 +122,5 @@ id | name | age
 ## Summary
 
 MongoDB is a modern database that gives flexibility and scalability, making it a strong choice for modern web applications, especially when data structure is not fixed.
+
+---
