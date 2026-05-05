@@ -97,6 +97,8 @@ db.employees.find({salary:{$gt:10}})
 - $lt -> means lesser than
 - $lte -> means lesser than equal to
 
+---
+
 ### 7. Find employees with age between 25 and 35
 
 ```js id="p7"
@@ -112,6 +114,8 @@ db.employees.find({},{name:1, role:1,_id:0})
 📝 Explanation
 -If we don't set _id:0, then query will default return that.
 
+---
+
 ### 9. Find employees whose role is "Developer"
 
 ```js id="p9"
@@ -126,6 +130,7 @@ db.employees.find({
 
 - Query will return exact match. If your column have value that is "developer" instead of "Developer" then in that case no data will return. To fix that we need to add regex.
 
+---
 
 ### 10. Sort employees by salary (descending)
 
