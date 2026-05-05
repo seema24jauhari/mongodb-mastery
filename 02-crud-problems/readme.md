@@ -77,7 +77,7 @@ db.employees.insertOne({
 12. Skip results
 13. Find employees where salary field exists
 
-## 🟢 Answer: READ (Query)
+## 🔵 Answer: READ (Query)
 
 ### 5. Get all employees
 
@@ -141,9 +141,9 @@ db.employees.find().sort({
 ```
 
 📝 Explanation
-1 → Ascending order
--1 → Descending order
-Can sort on multiple fields
+- 1 → Ascending order
+- -1 → Descending order
+- Can sort on multiple fields
 ---
 
 ### 11. Get top 2 highest paid employees
