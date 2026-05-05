@@ -141,6 +141,7 @@ db.employees.find().sort({
 ```
 
 📝 Explanation
+
 - 1 → Ascending order
 - -1 → Descending order
 - Can sort on multiple fields
