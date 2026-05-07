@@ -198,34 +198,106 @@ db.employees.find({ salary: { $exists: true } })
 - Combine with limit() for better control
 
 
-
-
-
 ## 🟡 UPDATE
 
-12. Increase salary of one employee by 10%
-13. Add `department = "IT"` to all employees
-14. Change role from "Developer" → "Senior Developer"
-15. Update multiple employees whose salary < 10 lakh
-16. Add new field `experience` to one employee
+14. Increase salary of one employee by 10%
+15. Add `department = "IT"` to all employees
+16. Change role from "Developer" → "Senior Developer"
+17. Update multiple employees whose salary < 10 lakh
+18. Add new field `experience` to one employee
+
+
+## 🟡 Answer: UPDATE (Query)
+
+### 14. Increase salary of one employee by 10%
+
+```js id="p14"
+db.employees.updateOne( { name: "Shivansh" }, { $mul: { salary: 100 } } )
+```
+
+### 15. Add `department = "IT"` to all employees
+```js id="p15"
+db.employees.updateMany( { }, {$set:{ department:"IT"}} )
+```
+
+### 16. Change role from "Developer" → "Senior Developer"
+```js id="p16"
+db.employees.updateMany( {role:"developer" }, {$set:{ role:"Senior Developer"}} )
+```
+
+### 17. Update multiple employees whose salary < 10 lakh
+```js id="p17"
+db.employees.updateMany( {salary:{$lt:1000000} }, {$set:{ bonusEligible:true}} )
+```
+
+### 18. Add new field `experience` to one employee
+```js id="p18"
+db.employees.updateMany( {name:"Sonam" }, {$set:{ experience:12}} )
+```
 
 ---
 
 ## 🔴 DELETE
 
-17. Delete one employee by name
-18. Delete all employees with salary < 8 lakh
-19. Delete all documents (be careful 😄)
+19. Delete one employee by name
+20. Delete all employees with salary < 8 lakh
+21. Delete all documents (be careful 😄)
+
+## 🔴 Answer: DELETE (Query)
+
+### 19. Increase salary of one employee by 10%
+
+```js id="p19"
+db.employees.deleteOne( {name:"Sonam" }, {} )
+```
+
+### 20. Delete all employees with salary < 8 lakh
+
+```js id="p20"
+db.employees.deleteOne( {name:"Sonam" }, {} )
+```
+
+### 21. Delete all documents
+
+```js id="p21"
+db.employees.deleteMany({})
+```
 
 ---
 
 ## 🟣 MIXED (Real Thinking)
 
-20. Find employees, sort by salary, limit 3
-21. Increase salary by 5% for employees in "IT"
-22. Remove `department` field from all employees
-23. Find employees where department exists
-24. Rename field `role` → `designation`
+22. Get Total Row Count
+23. Find employees, sort by salary, limit 3
+24. Increase salary by 5% for employees in "IT"
+25. Remove `department` field from all employees
+26. Find employees where department exists
+27. Rename field `role` → `designation`
+
+
+## 🟣 Answer: MIXED (Query)
+
+### 22. Get Total Row Count
+
+```js id="p22"
+// Get total number of employees
+db.employees.countDocuments()
+// Count employees whose salary is greater than 10 lakh
+db.employees.countDocuments({
+  salary: { $gt: 1000000 }
+})
+```
+
+### 23. Find employees, sort by salary, limit 3
+
+```js id="p23"
+db.employees.find({salary:{$exists:true}}).sort({salary:1}).limit(3)
+```
+
+24. Increase salary by 5% for employees in "IT"
+```js id="p24"
+db.employees.updateMany({department:'IT'},{$mul:{salary:1.05}})
+```
 
 ---
 
