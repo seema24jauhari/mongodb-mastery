@@ -9,9 +9,6 @@ A structured repository to demonstrate practical MongoDB skills — from basics 
 mongo-learning/
  ├── 01-basics/          # Core concepts, setup, and simple queries
  ├── 02-crud-problems/   # Real-world CRUD problems with solutions
- ├── 03-aggregation/     # Aggregation pipeline queries
- ├── 04-indexing/        # Indexing and performance concepts
- ├── 05-mini-project/    # Practical project using MongoDB
  └── README.md
 ```
 
