@@ -8,7 +8,7 @@ Practice problems on a real `employees` collection.
 
 | File | Problems | Topic |
 |------|----------|-------|
-| `dataset.js` | — | Sample data to insert first |
+| `data/seed.js` | — | Sample data to insert first |
 | `insert-problems.js` | 1–4 | insertOne, insertMany |
 | `read-problems.js` | 5–13 | find, sort, limit, skip, exists |
 | `update-problems.js` | 14–18 | updateOne, updateMany, $set, $mul |

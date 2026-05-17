@@ -49,3 +49,25 @@ db.employees.insertOne({
   age: 27,
   role: "Intern"
 });
+
+// Ordered vs unordered bulk insert
+// Ordered Insert — By default, bulk inserts are ordered — if one document fails, the rest are not inserted
+db.employees.insertMany([
+  { name: "Anil", age: 31, role: "Developer", salary: 900000 },
+  { name: "Sunil", age: 29, role: "Tester",    salary: 700000 },
+  { name: "Kiran", age: 27, role: "HR" } // Missing salary — will cause error if validation is on
+], { ordered: false }); // unordered option allows other valid documents to be inserted even if one fails
+
+//Unordered Insert — If ordered: false is set, MongoDB will attempt to insert all documents, and will report errors for any that fail, but will not stop the entire operation
+try {
+  db.employees.insertMany(
+    [
+      { _id: 1, name: "Ram" },
+      { _id: 1, name: "Shyam" },
+      { _id: 2, name: "Mohan" }
+    ],
+    { ordered: false }
+  );
+} catch (e) {
+  printjson(e.writeErrors);
+}

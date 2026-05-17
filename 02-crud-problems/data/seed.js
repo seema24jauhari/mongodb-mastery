@@ -12,7 +12,7 @@ db.employees.insertMany([
   { name: "Sita",    age: 26, role: "HR",          salary: 500000,  department: "HR" },
   { name: "Geeta",   age: 29, role: "Manager",    salary: 1000000, department: "IT" },
   { name: "Ravi",    age: 27, role: "Intern",     salary: 300000,  department: "IT" },
-  { name: "Sonam",   age: 35, role: "Developer",  salary: 950000,  department: "IT", experience: 10 },
+  { name: "Sonam",   age: 35, role: "Developer",  salary: 950000,  department: "IT", experience: 10, skills: ["JavaScript", "MongoDB"]   },
   { name: "Mohan",age: 31, role: "Developer",  salary: 750000,  department: "IT" }
 ]);
 

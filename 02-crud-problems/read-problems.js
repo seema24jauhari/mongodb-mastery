@@ -7,8 +7,23 @@ use("company");
 // ─────────────────────────────────────────────
 // Problem 5 — Get all employees
 // ─────────────────────────────────────────────
+// This is curson based query — it returns a cursor object which is an iterator over the result set
 db.employees.find({});
+// To see the actual documents, you can use toArray() or pretty()
+db.employees.find({}).toArray();
+// Used only for readable formatting. Not recommended for large datasets as it loads everything in memory
+db.employees.find({}).pretty();
 
+// Iterating over cursor with forEach (memory efficient for large datasets)
+let total = 0
+
+db.employees.find().forEach(emp => {
+   if(emp.salary){
+      total += Number(emp.salary)
+   }
+})
+
+print(total)
 
 // ─────────────────────────────────────────────
 // Problem 6 — Find employees with salary > 10 lakh (1,000,000)
