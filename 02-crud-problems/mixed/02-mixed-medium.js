@@ -43,17 +43,3 @@ db.employees.updateMany({role:'Intern'},{$unset:{salary:""}})
 db.employees.updateMany({experience:{$exists:false}},{$set: {experience:2}})
 
 
-// Find employees whose role is either MongoDB
-db.employees.find({
-  skills: "MongoDB"
-})
-
-
-// Find employees whose role is either JavaScript and MongoDB
-db.employees.find({
-  skills: { $in: ["MongoDB", "React"] }
-})
-
-db.employees.find({
-  skills: { $all: ["Node", "MongoDB"] }
-})
