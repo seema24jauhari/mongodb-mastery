@@ -33,10 +33,10 @@ db.employees.insertMany([
     joinedAt: new Date("2020-06-01"),
   },
   {
-    name: "Mohan",
     age: 32,
     role: "Tester",
     salary: 600000,
+    name: "Mohan",
     department: "IT",
     experience: 6,
     skills: ["Selenium", "Jest", "Postman"],

@@ -44,4 +44,5 @@ db.employees.updateMany(
 )
 
 
-// Find duplicate employee names
+// Remove all employees where salary field does not exist
+db.employees.deleteMany({salary:{$exists:false}})

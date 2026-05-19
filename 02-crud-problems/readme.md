@@ -9,11 +9,11 @@ Practice problems on a real `employees` collection.
 | File | Problems | Topic |
 |------|----------|-------|
 | `data/seed.js` | — | Sample data to insert first |
-| `insert-problems.js` | 1–4 | insertOne, insertMany |
-| `read-problems.js` | 5–13 | find, sort, limit, skip, exists |
-| `update-problems.js` | 14–18 | updateOne, updateMany, $set, $mul |
-| `delete-problems.js` | 19–21 | deleteOne, deleteMany |
-| `mixed-problems.js` | 22–27 | Combined real-world queries |
+| `01-insert.js` | 1–4 | insertOne, insertMany |
+| `02-read.js` | 5–13 | find, sort, limit, skip, exists |
+| `03-update.js` | 14–18 | updateOne, updateMany, $set, $mul |
+| `04-delete.js` | 19–21 | deleteOne, deleteMany |
+| `excersice` | 22–27 | Combined real-world queries |
 
 ---
 
