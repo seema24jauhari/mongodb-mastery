@@ -29,9 +29,61 @@ db.employees.find({
   }
 })
 
+
 // Find employees where joinedAt type is date
 db.employees.find({
   joinedAt: {
     $type: "date"
   }
+})
+
+
+// Find employees with more than 2 skills
+db.employees.find({
+  $expr: {
+    $gt: [
+      {$size: 'skills'},
+      2
+    ]
+  }
+})
+
+
+// Find employees where at least one skill starts with "J"
+db.employees.find({
+  skills: {
+    $regex: /^J/
+  }
+})
+
+// Find employees having exactly 3 skills
+db.employees.find({
+  'skills': {$size: 3}
+})
+
+// OR 
+// Find employees having exactly 3 skills
+db.employees.find({
+  $expr: {
+    $eq: [
+      {$size:'$skills'},
+      2
+    ]
+  }
+})
+
+// Find employees whose name contains exactly 5 characters
+db.employees.find({
+  $expr:{
+    $eq:[
+      {$strLenCP:'$name'},
+      5
+    ]
+  }
+})
+
+
+// Find employees whose salary is divisible by 5
+db.employees.find({
+  'salary':{$mod:[5,0]}
 })

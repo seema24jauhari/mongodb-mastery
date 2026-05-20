@@ -30,6 +30,20 @@ db.employees.find({
 
 
 // 2. $expr -> use aggregation expressions inside find
+/**
+ * Comparison aggregation expression operators
+ * Used mainly inside $expr
+ *
+ * | Operator | Meaning              |
+ * |----------|----------------------|
+ * | $eq      | equal                |
+ * | $ne      | not equal            |
+ * | $gt      | greater than         |
+ * | $gte     | greater than equal   |
+ * | $lt      | less than            |
+ * | $lte     | less than equal      |
+ */
+// Find employees where bonus > 10% of salary
 
 // Find employees where bonus > 10% of salary
 db.employees.find({

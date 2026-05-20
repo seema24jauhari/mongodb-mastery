@@ -34,11 +34,16 @@ db.employees.find({
   }
 })
 
-
-// Find employees with exactly 1 skill
+   
+// Find employees with exactly 1 skills
 db.employees.find({
   skills: {
     $size: 1
   }
 })
 
+
+// Find employees whose city contains "del" case insensitive
+db.employees.find({
+  'address.city':{$regex:/del/i}
+})
