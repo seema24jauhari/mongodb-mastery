@@ -27,3 +27,7 @@ db.employees.deleteMany({});
 
 // Remove entire collection
 db.employees.drop()
+
+
+// Remove entire db
+db.company.dropDatabase()
