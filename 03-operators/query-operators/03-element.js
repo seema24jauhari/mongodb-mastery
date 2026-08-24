@@ -29,10 +29,6 @@ db.employees.find({ email: { $type: "string" } })
 // Find employees where skills is an array
 db.employees.find({ skills: { $type: "array" } })
 
-// Find employees where skills is an array of size 3
-db.employees.find({ skills: { $size: 3 } })
-
-
 // Alternative numeric type usage
 // $type
 // 1 -> double 

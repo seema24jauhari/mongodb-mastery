@@ -45,7 +45,6 @@ db.employees.find({
  */
 // Find employees where bonus > 10% of salary
 
-// Find employees where bonus > 10% of salary
 db.employees.find({
   $expr: {
     $gt: ["$bonus", { $multiply: ["$salary", 0.1] }]

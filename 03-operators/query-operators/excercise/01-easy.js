@@ -27,7 +27,7 @@ db.employees.find({
   }
 })
 
-// Find employees having both "JavaScript" and "Node.js"
+// Find employees having skills both "JavaScript" and "Node.js"
 db.employees.find({
   skills: {
     $all: ["JavaScript", "Node.js"]
