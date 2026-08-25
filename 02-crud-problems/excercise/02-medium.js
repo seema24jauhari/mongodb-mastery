@@ -36,10 +36,15 @@ db.employees.find({salary:{$gt:700000},department:{$exists:true}})
 db.employees.updateMany({role:'Intern'},{$unset:{salary:""}})
 
 // Add experience = 2 where field does not exist
+db.employees.updateMany(
+  { experience: { $exists: false } },
+  { $set: { experience: 2 } }
+)
 
 // Find employees whose role is either Developer OR Tester
-
+db.employees.find({
+  role: { $in: ["Developer", "Tester"] }
+})
 // Delete employees whose salary is less than 4 lakh
-db.employees.updateMany({experience:{$exists:false}},{$set: {experience:2}})
-
+db.employees.deleteMany({salary:{$lt:400000}})
 

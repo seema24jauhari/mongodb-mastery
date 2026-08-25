@@ -10,7 +10,6 @@ use("company");
 // Find second highest paid employee
 db.employees.find({}).sort({salary:-1}).skip(1).limit(1)
 
-// Find employees whose salary is above average salary
 
 // Find employees whose salary is above average salary
 const avgSalary = db.employees.aggregate([

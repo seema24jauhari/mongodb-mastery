@@ -1,6 +1,9 @@
 // dataset.js
 // Run this FIRST to seed your local MongoDB before solving any problems.
 
+// To import data, run the following command in your terminal:
+// mongosh <path_to_this_file>/seed.js
+
 use("company");
 
 db.employees.drop(); // clear existing data if any

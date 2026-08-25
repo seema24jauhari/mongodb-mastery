@@ -37,10 +37,13 @@ db.employees.updateMany(
 
 
 // Remove department field from employee "Ravi"
+// "" is just a placeholder value. $unset ignores the value. You could also write: { $unset: { department: 1 } }
 db.employees.updateOne(
   { name: "Ravi" },
   { $unset: { department: "" } }
 );
+
+
 
 // Delete employees whose role is "Intern"
 db.employees.deleteMany({ role: "Intern" });

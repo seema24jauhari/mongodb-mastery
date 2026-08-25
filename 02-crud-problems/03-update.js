@@ -77,3 +77,16 @@ db.employees.updateOne(
   { name: "Soham" },
   { $push: { skills: "HTML" } }
 )
+
+// Add multiple skills to an employee's skills array
+db.employees.updateOne(
+  { name: "Soham" },
+  { $push: { skills: { $each: ["CSS", "JavaScript"] } } }
+)
+
+
+// To remove a value from an array field, we use the $pull operator. It removes all instances of the specified value from the array.
+db.employees.updateOne(
+  { name: "Soham" },
+  { $pull: { skills: "CSS" } }
+)
