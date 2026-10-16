@@ -79,3 +79,23 @@ db.employees.find({
 
 
 
+// 5. $where -> $where in MongoDB lets you filter documents using a JavaScript expression.
+
+db.employees.find({
+  $where: function () {
+    return this.salary > this.age * 1000;
+  }
+})
+
+/*
+
+Here, this refers to the current document.
+Important:
+- $where runs JavaScript for each document, so it can be slower.
+- It has security and performance drawbacks; avoid it when standard query operators can solve the problem.
+- For comparing fields, prefer $expr when possible.
+db.employees.find({
+  $expr: { $gt: ["$salary", { $multiply: ["$age", 1000] }] }
+})
+  
+*/

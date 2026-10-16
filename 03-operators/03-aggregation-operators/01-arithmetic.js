@@ -1,3 +1,4 @@
+// In MongoDB, aggregation means processing documents to calculate, transform, or summarize data.
 // ============================================================
 // aggregation-operators/01-arithmetic.js
 // MongoDB Aggregation Arithmetic Operators

@@ -49,7 +49,7 @@ db.users.insertMany([
 // ============================================================
 // $concat
 // ============================================================
-
+  
 // Q1. Create the full name by joining firstName and lastName.
 
 db.users.aggregate([
