@@ -104,3 +104,9 @@ db.employees.updateOne(
     }
   }
 )
+/*
+1. $push adds the new elements to the existing array.
+2. $slice: -2 keeps only the last 2 elements of the updated array.
+So it doesn't remove everything first. It adds first, then trims the array to the last 2 elements.
+*/
+
